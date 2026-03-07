@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+/* estilos gerais */
 * {
     padding: 0;
     margin: 0;
@@ -14,11 +15,12 @@ body {
 main {
     display: grid;
     grid-template-areas: 
+    "title title"
     "artur casares"
     "chris giovanna";
     justify-content: center;
     gap: 4rem;
-    margin: 6rem 4rem 4rem 4rem;
+    margin: 4rem;
 }
 
 a {
@@ -43,10 +45,36 @@ header {
 
 .logo-cega {
     width: 400px;
+    cursor: pointer;
 }
 
 
 /* estilização geral das sections */
+.title-section {
+    grid-area: title;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.title-section::before,
+.title-section::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: #7b819145;
+}
+
+.title-section h2 {
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    color: #7B8191;
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+
 .aluno {
     background-color: #171A21;
     border: 1px solid #737580;
@@ -114,7 +142,7 @@ header {
     box-shadow: 0 0 12px #9a9898b7;
 }
 
-#chris .aluno-location span{
+#chris .aluno-location span {
     color: #9A9898;
 }
 
@@ -129,7 +157,7 @@ header {
     box-shadow: 0 0 12px #47a6feb4;
 }
 
-#casares .aluno-location span{
+#casares .aluno-location span {
     color: #47A7FE;
 }
 
@@ -139,12 +167,12 @@ header {
     grid-area: giovanna;
 }
 
-#giovanna:hover{
+#giovanna:hover {
     border-color: #934FD7;
     box-shadow: 0 0 12px #934fd7bc;
 }
 
-#giovanna .aluno-location span{
+#giovanna .aluno-location span {
     color: #934FD7;
 }
 
@@ -154,12 +182,12 @@ header {
     grid-area: artur;
 }
 
-#artur:hover{
+#artur:hover {
     border-color: #FF1B5A;
     box-shadow: 0 0 12px #ff1b5cb5;
 }
 
-#artur .aluno-location span{
+#artur .aluno-location span {
     color: #FF1B5A;
 }
 
@@ -172,28 +200,61 @@ header {
     color: #7B8191;
 }
 
+
 /* responsividade - celular */
 @media (max-width: 480px) {
-main {
-    display: flex;
-    flex-direction: column;
-    margin: 4rem 1.5rem 2rem 1.5rem;
-    gap: 2rem;
-}
 
-header {
-    min-height: 60vh;
-}
+    main {
+        display: flex;
+        flex-direction: column;
+        margin: 3rem 1.5rem 2rem 1.5rem;
+        gap: 2rem;
+    }
 
-.logo-cega  {
-    width: 300px;
-}
+    header {
+        min-height: 60vh;
+    }
 
-.aluno {
-    width: 100%;
-}
+    .logo-cega {
+        width: 300px;
+    }
 
-.content p {
-    display: none;
-}
+    .aluno {
+        width: 100%;
+    }
+
+    .content p {
+        display: none;
+    }
+
+    .aluno:hover {
+        transform: none;
+        box-shadow: none;
+        border-color: #737580;
+    }
+
+    .aluno:active {
+        transform: scale(0.98);
+    }
+
+    #chris:active {
+        border-color: #9A9898;
+        box-shadow: 0 0 12px #9a9898b7;
+    }
+
+    #casares:active {
+        border-color: #47A7FE;
+        box-shadow: 0 0 12px #47a6feb4;
+    }
+
+    #giovanna:active {
+        border-color: #934FD7;
+        box-shadow: 0 0 12px #934fd7bc;
+    }
+
+    #artur:active {
+        border-color: #FF1B5A;
+        box-shadow: 0 0 12px #ff1b5cb5;
+    }
+
 }
