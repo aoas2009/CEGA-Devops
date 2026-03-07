@@ -21,6 +21,14 @@ a {
     color: inherit;
 }
 
+ol {
+    list-style: none;
+    counter-reset: lista;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
 .location {
     color: #934FD7;
 }
@@ -47,9 +55,12 @@ a {
     transform: scale(1.01);
 }
 
+.navbar-hero a, .navbar-header ul li a {
+    transition: 0.2s;
+}
+
 .navbar-hero a:hover, .navbar-header ul li a:hover {
     color: #934FD7;
-    transition: 0.2s;
 }
 
 
@@ -97,11 +108,6 @@ header {
     margin: 2rem;
 }
 
-.navbar-hero a:hover {
-    color: #934FD7;
-    transition: 0.2s;
-}
-
 .content-hero {
     margin: 2rem 12rem;
 }
@@ -130,6 +136,30 @@ header {
 
 
 /* estilização da section de curiosidades */
+.content-curiosities li {
+    counter-increment: lista;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 0.75rem 1rem;
+    background-color: #171A21;
+    border-radius: 0.5rem;
+}
+
+.content-curiosities li::before {
+    content: counter(lista);
+    background-color: #2a1f38;
+    color: #934FD7;
+    font-size: 0.75rem;
+    font-weight: 600;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
 
 
 /* estilização do footer */
@@ -178,6 +208,10 @@ header {
         position: absolute;
         margin-left: 2rem;
         bottom: 45%;
+    }
+
+    .content-curiosities li::before {
+        margin-top: 0.4rem;
     }
 
 }
