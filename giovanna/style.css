@@ -23,10 +23,6 @@ a {
     color: inherit;
 }
 
-li {
-    list-style: none;
-}
-
 .location {
     color: #934FD7;
 }
@@ -80,6 +76,7 @@ header {
 .navbar-header, .navbar-header ul {
     display: flex;
     gap: 4rem;
+    list-style: none;
 }
 
 .logo-cega {
