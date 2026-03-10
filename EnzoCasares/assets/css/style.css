@@ -1,0 +1,527 @@
+/* Reset e Configurações Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0a0a0a;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #fff;
+}
+
+/* Header */
+header {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
+                url("../img/italia-hero.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+    padding: 30px 60px 120px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar */
+.header {
+    background: linear-gradient(135deg, #009246 0%, #FFFFFF 50%, #CE2B37 100%);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    max-width: 700px;
+    margin: 0 auto 80px;
+    padding: 15px 30px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-header ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style-type: none;
+    gap: 50px;
+}
+
+#cega a {
+    text-decoration: none;
+}
+
+.logo-text {
+    font-size: 28px;
+    font-weight: 900;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    letter-spacing: 2px;
+    padding: 5px 15px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.logo-text:hover {
+    transform: scale(1.1);
+}
+
+.navbar-header ul li a {
+    text-decoration: none;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.navbar-header ul li a:hover {
+    color: #009246;
+    text-shadow: 2px 2px 5px rgba(0, 146, 70, 0.8);
+}
+
+.navbar-header ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: -5px;
+    left: 0;
+    background: linear-gradient(90deg, #009246, #CE2B37);
+    transition: width 0.3s ease;
+}
+
+.navbar-header ul li a:hover::after {
+    width: 100%;
+}
+
+/* Título Principal */
+#titulo-subtitulo {
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 150px;
+}
+
+#meu-sonho {
+    font-family: 'Arial', sans-serif;
+    color: #009246;
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+header h1 {
+    font-size: clamp(50px, 8vw, 90px);
+    font-weight: 900;
+    margin-bottom: 25px;
+    line-height: 1.1;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+}
+
+#span {
+    background: linear-gradient(45deg, #009246, #FFFFFF, #CE2B37);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 900;
+}
+
+#titulo-subtitulo > p:last-child {
+    font-size: clamp(20px, 3vw, 28px);
+    font-family: 'Georgia', serif;
+    line-height: 1.6;
+    color: #f0f0f0;
+    max-width: 800px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Seção Aluno */
+#aluno {
+    color: white;
+    background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
+    border: 3px solid;
+    border-image: linear-gradient(135deg, #009246, #FFFFFF, #CE2B37) 1;
+    width: 90%;
+    max-width: 1200px;
+    margin: 100px auto;
+    border-radius: 30px;
+    padding: 50px;
+    box-shadow: 0 10px 40px rgba(0, 146, 70, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#aluno:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 50px rgba(206, 43, 55, 0.4);
+}
+
+#sobre-aluno {
+    font-size: 16px;
+    color: #009246;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+#aluno h2 {
+    font-size: 48px;
+    margin-bottom: 30px;
+    background: linear-gradient(45deg, #009246, #CE2B37);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+#info-juntas {
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+#turma {
+    flex: 1;
+    min-width: 200px;
+}
+
+.label {
+    color: #888;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+#turma p:last-child {
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+}
+
+/* Seção Por que a Itália */
+#lugar {
+    background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 100px 60px;
+    gap: 60px;
+    flex-wrap: wrap;
+    border-top: 4px solid;
+    border-image: linear-gradient(90deg, #009246, #CE2B37) 1;
+}
+
+#part-text {
+    flex: 1;
+    min-width: 500px;
+    color: white;
+}
+
+#part-text h2 {
+    color: white;
+    font-size: clamp(40px, 5vw, 55px);
+    margin-bottom: 20px;
+    background: linear-gradient(45deg, #009246, #FFFFFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.sub {
+    font-size: 22px;
+    color: #d4d4d4;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+#lista-p {
+    margin-top: 50px;
+}
+
+#lista-p p {
+    font-size: 20px;
+    color: #f5f5f5;
+    margin-bottom: 35px;
+    padding-left: 15px;
+    border-left: 4px solid #009246;
+    transition: all 0.3s ease;
+}
+
+#lista-p p:hover {
+    transform: translateX(10px);
+    border-left-color: #CE2B37;
+    border-left-width: 6px;
+}
+
+#lista-p strong {
+    color: #009246;
+}
+
+#imagem {
+    flex: 1;
+    min-width: 400px;
+}
+
+#imagem img {
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+    border-radius: 25px;
+    border: 4px solid;
+    border-image: linear-gradient(135deg, #009246, #CE2B37) 1;
+    box-shadow: 0 15px 50px rgba(0, 146, 70, 0.4);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+#imagem img:hover {
+    transform: scale(1.05) rotate(1deg);
+    box-shadow: 0 20px 60px rgba(206, 43, 55, 0.6);
+}
+
+/* Seção Galeria */
+#galeria {
+    padding: 100px 60px;
+    background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+    text-align: center;
+}
+
+#galeria h2 {
+    font-size: 48px;
+    margin-bottom: 60px;
+    background: linear-gradient(45deg, #009246, #CE2B37);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.galeria-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.galeria-item:hover {
+    transform: translateY(-10px);
+}
+
+.galeria-item img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 3px solid;
+    border-image: linear-gradient(135deg, #009246, #CE2B37) 1;
+    transition: transform 0.5s ease;
+}
+
+.galeria-item:hover img {
+    transform: scale(1.1);
+}
+
+.galeria-item p {
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #009246;
+}
+
+/* Seção Curiosidades */
+#curiosidades {
+    margin: 100px auto;
+    max-width: 1400px;
+    display: flex;
+    justify-content: space-around;
+    gap: 80px;
+    padding: 0 60px;
+    flex-wrap: wrap;
+}
+
+#lado-esquerdo, #lado-direito {
+    flex: 1;
+    min-width: 450px;
+}
+
+#lado-esquerdo h2, #lado-direito h2 {
+    color: white;
+    font-size: 42px;
+    margin-bottom: 40px;
+    padding-bottom: 15px;
+    border-bottom: 4px solid;
+    border-image: linear-gradient(90deg, #009246, #CE2B37) 1;
+}
+
+#lado-esquerdo ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#lado-esquerdo ul li {
+    color: #d4d4d4;
+    margin-bottom: 30px;
+    font-size: 19px;
+    padding: 20px;
+    background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
+    border-radius: 15px;
+    border-left: 5px solid #009246;
+    transition: all 0.3s ease;
+}
+
+#lado-esquerdo ul li:hover {
+    transform: translateX(10px);
+    background: linear-gradient(135deg, #252525 0%, #1a1a1a 100%);
+    box-shadow: 0 5px 20px rgba(206, 43, 55, 0.3);
+    border-left-color: #CE2B37;
+}
+
+#lado-esquerdo ul li strong {
+    color: #009246;
+    font-size: 21px;
+}
+
+#lado-direito ol {
+    counter-reset: item;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#lado-direito ol li {
+    color: #f0f0f0;
+    margin-bottom: 35px;
+    font-size: 19px;
+    padding: 20px 20px 20px 70px;
+    background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
+    border-radius: 15px;
+    position: relative;
+    transition: all 0.3s ease;
+    border-right: 5px solid #CE2B37;
+}
+
+#lado-direito ol li:hover {
+    transform: translateX(10px);
+    background: linear-gradient(135deg, #252525 0%, #1a1a1a 100%);
+    box-shadow: 0 5px 20px rgba(0, 146, 70, 0.3);
+    border-right-color: #009246;
+}
+
+#lado-direito ol li::before {
+    content: counter(item);
+    counter-increment: item;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(135deg, #009246, #CE2B37);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+    box-shadow: 0 4px 10px rgba(0, 146, 70, 0.5);
+}
+
+/* Footer */
+footer {
+    border-top: 3px solid;
+    border-image: linear-gradient(90deg, #009246, #FFFFFF, #CE2B37) 1;
+    color: #009246;
+    font-size: 18px;
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #0a0a0a;
+    margin-top: 100px;
+    font-weight: 600;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    #lugar {
+        flex-direction: column;
+        padding: 80px 40px;
+    }
+
+    #part-text, #imagem {
+        min-width: 100%;
+    }
+
+    #curiosidades {
+        flex-direction: column;
+        padding: 0 40px;
+    }
+
+    #lado-esquerdo, #lado-direito {
+        min-width: 100%;
+    }
+
+    .galeria-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 20px 30px 80px;
+    }
+
+    .header {
+        max-width: 90%;
+        padding: 10px 20px;
+    }
+
+    .navbar-header ul {
+        gap: 20px;
+        font-size: 14px;
+    }
+
+    .logo-text {
+        font-size: 22px;
+    }
+
+    #titulo-subtitulo {
+        margin-top: 80px;
+    }
+
+    #aluno {
+        padding: 30px;
+        margin: 60px auto;
+    }
+
+    #info-juntas {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    #lugar, #galeria {
+        padding: 60px 20px;
+    }
+
+    #curiosidades {
+        margin: 60px auto;
+        padding: 0 20px;
+    }
+
+    #lado-esquerdo, #lado-direito {
+        min-width: 100%;
+    }
+}
